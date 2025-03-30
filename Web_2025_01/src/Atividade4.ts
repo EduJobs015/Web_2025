@@ -1,7 +1,7 @@
-let numeros1: number[] = [45, 29, 33, 10, 22, 50, 67, 88, 79, 74]
+let numeros1: number[] =  [12, 25, 37, 40, 18, 55, 62, 71, 84, 91]
 let impar: number[] = []
 let par: number[] = []
-let armazenar: number = numeros1 [0]
+let armazenar: number = 0
 
 for(let imparPar of numeros1){
     if(imparPar % 2 == 1){
@@ -17,8 +17,9 @@ for(let imparPar of numeros1){
             par.push(imparPar)
         }
     }
-    armazenar = imparPar
+        armazenar = imparPar
 }
+
 console.log(impar)
 console.log(par)
 
