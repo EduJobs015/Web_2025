@@ -7,18 +7,14 @@ let Resto: number[] = []
 for(let percorer of numeros4){
     if(percorer % 3 == 0){
         multiplosTres.push(percorer)
-            if(percorer % 5 == 0 )
-                multiplosCinco.push(percorer)
+        if(percorer % 5 == 0 )
+            multiplosCinco.push(percorer)
     }else if(percorer % 5 == 0){
         multiplosCinco.push(percorer)
     }else{
         Resto.push(percorer)
     }
 }
-
-multiplosTres.sort((a,b) => a - b)
-multiplosCinco.sort((a,b) => a - b)
-Resto.sort((a,b) => a - b)
 
 console.log(multiplosTres)
 console.log(multiplosCinco)
