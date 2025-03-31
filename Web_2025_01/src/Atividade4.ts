@@ -6,6 +6,7 @@ let cont: number = 0
 let maior: number = 0
 let menor: number = numeros1[0]
 
+
 for(let imparPar of numeros1){
     if(imparPar % 2 == 1){
         impar.push(imparPar)
