@@ -9,6 +9,7 @@ let soma: number = 0
 let cont5: number = 0
 let anterior2: number = 0  // usar ela 
 
+
 for(let percorer of numeros4){
     if(percorer % 3 == 0){
         multiplosTres.push(percorer)
@@ -29,6 +30,25 @@ for(let percorer of numeros4){
         menor1 = percorer
     }
 }
+
+// Ordenação Decrescente
+// Assim posso passar por cada numero do Array e comparar o indice i com o restante do array podendo trocar os lugares e assim ordenando o array comforme o pedido
+for(let i = 0; i < multiplosTres.length; i ++){ // o primeiro for fica responsalvel por passar por cada item do array, um por vez enquanto o segundo for comparar a posição que ele esta com os demais numeros só depois da vereficação acabar ele anda para o proximo item.
+    for(let j = i + 1; j <multiplosTres.length; j ++){ // enquanto o primeiro for esta parado com um indice esse for fica responsavel por comparar o indece com os demais indeces do array e caso precise faz oque a condição a seguir pede. 
+        if (multiplosTres[i] < multiplosTres[j]){ // aqui ele compara se o indece i e menor que o j, 
+            let temporario = multiplosTres[i] // aqui eu declarey uma variavewl local só para armazenar o numero de i para não perder o valor de multiploTres[i].
+           multiplosTres[i] = multiplosTres[j] // se a condição de cima for verdade eu vou pegar o valor de j que é menor que o do i e vou colocar no lugar do i.
+            multiplosTres[j] = temporario // e atribuo o valor de i no j, usando a variavel onde armazenei o valor de i, assim eu troco eles de lugar podendo ordenar em ordem crescente 
+        }
+    }
+}
+
+for(let i = 0; i < multiplosCinco.length; i ++){
+    for(let j = i + 1; j < multiplosCinco.length; i ++){
+        
+    }
+}
+
 
 console.log(multiplosTres)
 console.log(multiplosCinco)
