@@ -21,7 +21,7 @@ for(let percorer of numeros4){
         Resto.push(percorer)
     }
     cont5 ++
-    soma =+ percorer
+    soma += percorer
 
     if(maior5 < percorer){
         maior5 = percorer
@@ -44,10 +44,26 @@ for(let i = 0; i < multiplosTres.length; i ++){ // o primeiro for fica responsal
 }
 
 for(let i = 0; i < multiplosCinco.length; i ++){
-    for(let j = i + 1; j < multiplosCinco.length; i ++){
-        
+    for(let j = i + 1; j < multiplosCinco.length; j ++){
+        if(multiplosCinco[i] < multiplosCinco[j]){
+            let temporario2 = multiplosCinco[i]
+            multiplosCinco[i] = multiplosCinco[j]
+            multiplosCinco[j] = temporario2
+        }
     }
 }
+
+
+for(let i = 0; i < Resto.length; i ++){
+    for(let j = i + 1; j < Resto.length; j ++){
+        if(Resto[i] < Resto[j]){
+            let temporario3 = Resto[i]
+            Resto[i] = Resto[j]
+            Resto[j] = temporario3
+        }
+    }
+}
+
 
 
 console.log(multiplosTres)
