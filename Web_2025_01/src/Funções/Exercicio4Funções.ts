@@ -12,3 +12,6 @@ const funcionarios : Funcionario [] = [
     
 const cargoDesejado : string = " Desenvolvedor ";
     
+let funcaoCargo = funcionarios.filter( funcionarios => funcionarios.cargo == cargoDesejado)
+
+console.log(funcaoCargo)
