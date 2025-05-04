@@ -18,19 +18,19 @@ function imprimirTarefa(descricao: string, indice : number,totalTarefas : number
 Tarefas.sort((a:Tarefa, b :Tarefa) => a.prioridade - b.prioridade)
 
 function executarTarefa(tarefas : Tarefa[],  callback : (descricao: string, indice : number, quantidade : number) => void, intervalo:number ): void{
-
+    
         for (let i = 0; i < tarefas.length; i ++){
             let timeout = setInterval(() => {
                 console.log(`Execurtando a tarefa ${Tarefas[i].prioridade}...`)
-            }, intervalo)
-            if(Tarefas[i].descricao == "Cancelar"){
+                if(Tarefas[i].descricao == "Cancelar"){
+                    clearInterval(timeout)
+                }else{
+                    Tarefas[i].concluida = true
+                    console.log(Tarefas[i])
+                    callback(Tarefas[i].descricao, i, 3)
+                }
                 clearInterval(timeout)
-            }else{
-                Tarefas[i].concluida = true
-                console.log(Tarefas[i])
-            callback(Tarefas[i].descricao, i, 3)
-            }
-            clearInterval(timeout)
+        },i * intervalo) // aqui estou usando o i * para que cada indece ele de um intervalo diferente de 1 segundo e 50 milessimos, sem o i * eu não consigo colocar o timeout em cada elemento 
         }
 }
 
