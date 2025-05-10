@@ -1,3 +1,11 @@
+interface IDateUtilsStatic {
+    formatarData(Data: Date, Formato: string): string;
+    diferencaEmDias(Data: Date, Data2: Date): number;
+    adicionarDias(Data: Date, Add: number): Date;
+    ehFinalDeSemana(Data: Date): boolean;
+    converterParaISO(Data: Date): string;
+    calcularIdade(dataNascimento: string): number;
+  }
 class DateUtils {
     Data :Date 
     Formato :string
@@ -11,7 +19,7 @@ class DateUtils {
 
     static formatarData(Data :Date, Formato :string) : string{
         const Dia : number = Data.getDate() // getDate é usado para pegar o dia de uma data fornecida 
-        const Mes : number = Data.getMonth() // getMonth é usado para pegar o mes de uma data fornecida 
+        const Mes : number = Data.getMonth() + 1 // getMonth é usado para pegar o mes de uma data fornecida 
         const ano : number = Data.getFullYear() // getFullYear é usado para pegar o ano de uma data fornecida
 
 
@@ -67,6 +75,30 @@ class DateUtils {
 
 }
 
+
+/*
+                                    METODO                                  
+
+Um método é uma função definida dentro de uma classe ou objeto.
+
+Ele representa um comportamento ou ação que a classe ou objeto pode realizar.
+
+Métodos têm implementação (ou seja, código que executa alguma lógica).
+
+*/
+
+
+/*
+                                    INTERFACE
+
+Uma interface é um contrato que define a forma (estrutura) que um objeto ou classe deve seguir.
+
+Ela não tem implementação, apenas define propriedades e métodos que devem existir.
+
+Serve para tipagem e garantia de estrutura no TypeScript.
+
+*/
+const inter : IDateUtilsStatic = DateUtils; // Isso força o TypeScript a verificar se DateUtils está realmente cumprindo o contrato da interface IDateUtilsStatic.
 const hoje = new Date () ;
 
 console.log(DateUtils.formatarData(hoje,"dd/mm/yyyy"))
