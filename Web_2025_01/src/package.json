@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    " start ": " node dist /app.js",
+    " build ": " npx tsc",
+    "dev": "ts - node src/app.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "-": "^0.0.1",
+    "@types/express": "^5.0.2",
+    "express": "^5.1.0",
     "node": "^20.19.0",
     "ts": "^0.2.2"
   },
-  "devDependencies": {},
   "description": ""
 }
